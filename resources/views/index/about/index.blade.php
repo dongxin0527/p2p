@@ -8,7 +8,7 @@
       <li><a href="qualification.html">公司资质</a></li>
       <li><a href="news.html">网站公告</a></li>
       <li><a href="reports.html">媒体报道</a></li>
-      <li><a href="partners.html">合作伙伴</a></li>
+      <li><a href="partners.html">开心一刻</a></li>
       <li><a href="about.html">安全保障</a></li>
       <li><a href="about.html">本金保障</a></li>
       <li><a href="about.html">帮助中心</a></li>

@@ -19,7 +19,9 @@ Route::middleware([])->namespace('admin')->group(function(){
 	Route::prefix('admin')->group(function(){
 		Route::prefix('index')->group(function(){
 			Route::get('index','AdminController@index'); //后台首页
-		
+		});
+		Route::prefix('realName')->group(function(){
+			Route::get('realNameRequest','RealNameController@realNameRequest'); //实名认证请求管理
 		});
 	});
 });
