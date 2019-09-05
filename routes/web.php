@@ -29,5 +29,8 @@ Route::middleware([])->namespace('index')->group(function(){
 		Route::prefix('index')->group(function(){
 			Route::any('index','IndexController@index');//前台首页
 		});
+		Route::prefix('about')->group(function(){
+			Route::any('index','AboutController@index');//关于我们
+		});
 	});
 });
