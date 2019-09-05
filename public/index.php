@@ -1,12 +1,10 @@
 <?php
-echo 2;
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
  */
-echo 1;
 define('LARAVEL_START', microtime(true));
 
 /*
