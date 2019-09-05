@@ -22,8 +22,6 @@
 </div>
 <div class="head">
   <div class="wrap pct-h clearfix">
-    <a href="index.html" class="logo indent">logo</a>
-    <div class="adtxt indent">有钱没钱，找十七金融</div>
     <ul class="nav">
       <li><a href="index.html">首页</a></li>
       <li><a href="invest.html">我要投资</a></li>
