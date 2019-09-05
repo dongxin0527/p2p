@@ -6,7 +6,7 @@
 <meta name="description" content="闹着玩">
 <meta name="author" content="闹着玩">
 <link href="/index/css/css.css" rel="stylesheet">
-<link href="favicon.ico" rel="SHORTCUT ICON">
+<link href="/index/favicon.ico" rel="SHORTCUT ICON">
 <title>闹着玩</title>
 </head>
 <body>
@@ -25,7 +25,7 @@
     <ul class="nav">
       <li><a href="index.html">首页</a></li>
       <li><a href="invest.html">我要投资</a></li>
-      <li><a href="borrow.html">我要借款</a></li>
+      <li><a href="{{url('index/loan/loanForm')}}">我要借款</a></li>
       <li><a href="about.html">关于我们</a></li>
     </ul>
   </div>
@@ -34,6 +34,35 @@
 @section('content')
 @show
 
+<!--Partner-->
+<div class="Partner mt10">
+  <div class="wrap clearfix">
+    <div class="hd fl">
+      <b>合作伙伴</b>
+      <span class="en">Partners</span>
+    </div>
+    <div class="bd fr">
+      <div id="Marquee_x">
+        <ul>
+          <li>
+            <a href="http://www.cardanro.com.cn" target="_blank" class="img"><img src="/index/upload/logo_03.jpg"></a>
+            <a href="http://www.hsbank.com.cn" target="_blank" class="img"><img src="/index/upload/logo_06.jpg"></a>
+            <a href="http://www.hongren.com.cn" target="_blank" class="img"><img src="/index/upload/logo_08.jpg"></a>
+            <a href="http://www.boc.cn" target="_blank" class="img"><img src="/index/upload/logo_11.jpg"></a>
+            <a href="http://www.xtep.com" target="_blank" class="img"><img src="/index/upload/logo_14.jpg"></a>
+            <a href="http://www.edenbo.com" target="_blank" class="img"><img src="/index/upload/logo_17.jpg"></a>
+            <a href="http://www.ayilian.com" target="_blank" class="img"><img src="/index/upload/logo_19.jpg"></a>
+            <a href="http://www.tonlion.com" target="_blank" class="img"><img src="/index/upload/logo_22.jpg"></a>
+            <a href="http://mall.jd.com/index-34890.html" target="_blank" class="img"><img src="/index/upload/logo_25.jpg"></a>
+            <a href="http://www.cmbc.com.cn" target="_blank" class="img"><img src="/index/upload/logo_28.jpg"></a>
+            <a href="http://itisf4.tmall.com" target="_blank" class="img"><img src="/index/upload/logo_31.jpg"></a>
+            <a href="http://www.cebbank.com" target="_blank" class="img"><img src="/index/upload/logo_33.jpg"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <!--foot-->
 <div class="foot">
   <div class="wrap clearfix">
