@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 // 后台
 Route::middleware([])->namespace('admin')->group(function(){
 	Route::prefix('admin')->group(function(){
@@ -27,12 +24,16 @@ Route::middleware([])->namespace('admin')->group(function(){
 });
 //前台
 Route::middleware([])->namespace('index')->group(function(){
+	Route::any('/','IndexController@index');//前台首页
 	Route::prefix('index')->group(function(){						
-		Route::prefix('index')->group(function(){
-			Route::any('index','IndexController@index');//前台首页
+		Route::prefix('loan')->group(function(){
+			Route::any('loanForm','LoanController@loanForm');//我要借款
+			Route::any('loanadd_do','LoanController@loanadd_do');//我要借款的表单处理
 		});
+		
 		Route::prefix('about')->group(function(){
 			Route::any('index','AboutController@index');//关于我们
 		});
+
 	});
 });
