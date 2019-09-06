@@ -257,6 +257,7 @@
 <script src="/index/js/waste.js"></script>
 <script src="/index/js/banner.js"></script>
 <script src="/index/js/jQuery-jcMarquee.js"></script>
+<<<<<<< HEAD
 <script type="text/javascript" src="/index/js/jquery-1.7.2.min.js"></script>
 <!--Partner-->
 <div class="Partner mt10">
@@ -287,5 +288,7 @@
     </div>
   </div>
 </div>
+=======
+>>>>>>> master
 
 @endsection

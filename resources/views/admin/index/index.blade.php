@@ -45,15 +45,15 @@
                     <li>
                         <a href="#">
                             <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label"> 分类管理 </span>
+                            <span class="nav-label"> 实名认证管理 </span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="{:url('admin/category/cateAdd')}">分类添加</a>
+                                <a class="J_menuItem" href="{{url('admin/realName/realNameRequest')}}">实名认证</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="{:url('admin/category/cateList')}">分类列表</a>
+                                <a class="J_menuItem" href="{:url('admin/category/cateList')}"></a>
                             </li>
                         </ul>
                     </li>
