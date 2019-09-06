@@ -19,9 +19,9 @@ class UserInfo extends Model
      * @param    [type]                   $name [用户姓名]
      * @return   [type]                         [数据库中是否有数据]
      */
-    public static function nameUnique($name)
+    public static function nameUnique($uid)
     {
-    	$data = self::where("name",$name)->first();
+    	$data = self::where("uid",$uid)->first();
     	return $data;
     }
     /**
