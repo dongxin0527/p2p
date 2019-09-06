@@ -203,7 +203,7 @@
 
 	        <tr>
 	          <th></th>
-	          <td><input type="submit" id="save" value="立即申请" class="btn btnSize_6 btn_orange" /></td>
+	          <td><input type="submit" id="save" value="实名认证" class="btn btnSize_6 btn_orange" /></td>
 	        </tr>
 	      </table>      	
 	    </form>
