@@ -19,6 +19,7 @@ Route::middleware([])->namespace('admin')->group(function(){
 		});
 		Route::prefix('realName')->group(function(){
 			Route::get('realNameRequest','RealNameController@realNameRequest'); //实名认证请求管理
+			Route::post('realNameRequestDo','RealNameController@realNameRequestDo'); //实名认证处理
 		});
 	});
 });
