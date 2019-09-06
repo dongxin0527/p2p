@@ -41,8 +41,7 @@ class LoanController extends Controller
     public function loanadd_do(Request $request)
     {
     	//获取用户ID
-    	//$uid = Common::getUserId();
-    	$uid = 1;//暂时写死1
+    	$uid = Common::getUserId();
     	//用户信息入库
     	$data = $request->all();
     	$this->isEmpty($data);
@@ -135,10 +134,9 @@ class LoanController extends Controller
      * @param    [type]                   $data [表单提交的数据]
      * @return   boolean                        [description]
      */
-    public function isUnique($data)
+    public function isUnique($uid)
     {
-    	$name = $data['name'];
-    	$res = UserInfo::nameUnique($name);
+    	$res = UserInfo::nameUnique($uid);
     	if ($res) {
     		Common::url("/index/loan/loanWait","您已经实名认证过");die;
     	}
