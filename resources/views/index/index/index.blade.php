@@ -257,5 +257,38 @@
 <script src="/index/js/waste.js"></script>
 <script src="/index/js/banner.js"></script>
 <script src="/index/js/jQuery-jcMarquee.js"></script>
+<<<<<<< HEAD
+<script type="text/javascript" src="/index/js/jquery-1.7.2.min.js"></script>
+<!--Partner-->
+<div class="Partner mt10">
+  <div class="wrap clearfix">
+    <div class="hd fl">
+      <b>合作伙伴</b>
+      <span class="en">Partners</span>
+    </div>
+    <div class="bd fr">
+      <div id="Marquee_x">
+        <ul>
+          <li>
+            <a href="http://www.cardanro.com.cn" target="_blank" class="img"><img src="/index/upload/logo_03.jpg"></a>
+            <a href="http://www.hsbank.com.cn" target="_blank" class="img"><img src="/index/upload/logo_06.jpg"></a>
+            <a href="http://www.hongren.com.cn" target="_blank" class="img"><img src="/index/upload/logo_08.jpg"></a>
+            <a href="http://www.boc.cn" target="_blank" class="img"><img src="/index/upload/logo_11.jpg"></a>
+            <a href="http://www.xtep.com" target="_blank" class="img"><img src="/index/upload/logo_14.jpg"></a>
+            <a href="http://www.edenbo.com" target="_blank" class="img"><img src="/index/upload/logo_17.jpg"></a>
+            <a href="http://www.ayilian.com" target="_blank" class="img"><img src="/index/upload/logo_19.jpg"></a>
+            <a href="http://www.tonlion.com" target="_blank" class="img"><img src="/index/upload/logo_22.jpg"></a>
+            <a href="http://mall.jd.com/index-34890.html" target="_blank" class="img"><img src="/index/upload/logo_25.jpg"></a>
+            <a href="http://www.cmbc.com.cn" target="_blank" class="img"><img src="/index/upload/logo_28.jpg"></a>
+            <a href="http://itisf4.tmall.com" target="_blank" class="img"><img src="/index/upload/logo_31.jpg"></a>
+            <a href="http://www.cebbank.com" target="_blank" class="img"><img src="/index/upload/logo_33.jpg"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+=======
+>>>>>>> master
 
 @endsection

@@ -4,7 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+
     "content-hash": "1698b8d779d609956db9bc3697b9fac4",
+
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -902,6 +904,7 @@
         },
         {
             "name": "mews/captcha",
+<<<<<<< HEAD
             "version": "3.0.1",
             "source": {
                 "type": "git",
@@ -912,10 +915,23 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/mewebstudio/captcha/zipball/bef0db3663f1fe442ae803fb207dbe2bbfa10890",
                 "reference": "bef0db3663f1fe442ae803fb207dbe2bbfa10890",
+=======
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mewebstudio/captcha.git",
+                "reference": "2c9efa19d7d7ae56bed5f23e1c4c42ea5d01fc1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mewebstudio/captcha/zipball/2c9efa19d7d7ae56bed5f23e1c4c42ea5d01fc1a",
+                "reference": "2c9efa19d7d7ae56bed5f23e1c4c42ea5d01fc1a",
+>>>>>>> master
                 "shasum": ""
             },
             "require": {
                 "ext-gd": "*",
+<<<<<<< HEAD
                 "illuminate/config": "~5.0|^6.0",
                 "illuminate/filesystem": "~5.0|^6.0",
                 "illuminate/hashing": "~5.0|^6.0",
@@ -927,6 +943,18 @@
             "require-dev": {
                 "mockery/mockery": "^1.0",
                 "phpunit/phpunit": "^8.0"
+=======
+                "illuminate/config": "~5.0",
+                "illuminate/filesystem": "~5.0",
+                "illuminate/hashing": "~5.0",
+                "illuminate/support": "~5.0",
+                "intervention/image": "~2.2",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.1"
+>>>>>>> master
             },
             "type": "package",
             "extra": {
@@ -954,6 +982,7 @@
             "authors": [
                 {
                     "name": "Muharrem ERİN",
+<<<<<<< HEAD
                     "email": "me@mewebstudio.com",
                     "homepage": "https://github.com/mewebstudio",
                     "role": "Developer"
@@ -968,6 +997,21 @@
                 "laravel6 Security"
             ],
             "time": "2019-09-05T22:33:04+00:00"
+=======
+                    "role": "Developer",
+                    "email": "me@mewebstudio.com",
+                    "homepage": "https://github.com/mewebstudio"
+                }
+            ],
+            "description": "Laravel 5 Captcha Package",
+            "homepage": "https://github.com/mewebstudio/captcha",
+            "keywords": [
+                "captcha",
+                "laravel5 Captcha",
+                "laravel5 Security"
+            ],
+            "time": "2019-08-16T21:57:24+00:00"
+>>>>>>> master
         },
         {
             "name": "monolog/monolog",
