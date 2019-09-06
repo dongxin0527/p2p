@@ -41,8 +41,7 @@ class LoanController extends Controller
     public function loanadd_do(Request $request)
     {
     	//获取用户ID
-    	//$uid = Common::getUserId();
-    	$uid = 1;//暂时写死1
+    	$uid = Common::getUserId();
     	//用户信息入库
     	$data = $request->all();
     	$this->isEmpty($data);

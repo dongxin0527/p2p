@@ -15,7 +15,7 @@ class Common extends Model
 	 */
 	public static function getUserId()
 	{
-		$uid = session('index_login');		
+		$uid = session('uid');	
 		return $uid;
 	}
 	/**

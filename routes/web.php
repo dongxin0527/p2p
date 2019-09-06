@@ -24,8 +24,8 @@ Route::middleware([])->namespace('admin')->group(function(){
 	});
 });
 //前台
+Route::any('/','index\IndexController@index');//前台首页
 Route::middleware([])->namespace('index')->group(function(){
-	Route::any('/','IndexController@index');//前台首页
 	Route::prefix('index')->group(function(){						
 		Route::prefix('loan')->group(function(){
 			Route::any('loanForm','LoanController@loanForm');//我要借款
