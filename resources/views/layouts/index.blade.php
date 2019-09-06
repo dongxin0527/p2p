@@ -17,7 +17,7 @@
     <a href="#" target="_blank" class="ico weibo"></a>
     <a href="#" target="_blank" class="ico weixin"></a>
     <a href="#" target="_blank" class="ico qq"></a>
-    <span class="fr"><a href="javascript:;" class="loginbtn">登录</a><a href="javascript:;" class="o regbtn">免费注册</a><a href="about.html">帮助中心</a></span>
+    <span class="fr"><a href="login" class="loginbtn">登录</a><a href="register" class="o regbtn">免费注册</a><a href="about.html">帮助中心</a></span>
   </div>
 </div>
 <div class="head">
@@ -32,7 +32,6 @@
     </ul>
   </div>
 </div>
-
 @section('content')
 @show
 
