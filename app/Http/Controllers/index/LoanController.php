@@ -18,7 +18,6 @@ class LoanController extends Controller
     public function LoanForm(Request $request)
     {
         $uid = $request->get('uid');
-        dd($uid);
     	if (request()->ajax()) {
     		$pid = $request->input('pid');
     		$data = Area::where('pid',$pid)->get()->toArray();

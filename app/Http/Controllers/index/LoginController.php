@@ -24,25 +24,18 @@ class LoginController extends Controller
     */
    public function login_do(Request $request){
    		$data=request()->all();
-      // dd($data);
    		$data['password']=sha1($data['password']);
    		$where=[
    			['username','=',$data['username']],
    			['password','=',$data['password']]
    		];
    		$uid = $request->session()->get('uid');
-      // dd($uid);
-   		// request()->session()->flush();die();
    		if(empty($uid)){
-     			$select=UserModel::where($where)->first()->toArray();
-          // dd($select);
+     			$select=UserModel::where($where)->first();
           if(empty($select)){
-            echo '<script>alert("用户名或密码错误 请去登陆");location.href="login"</script>';die();
+             return json_encode(['msg'=>'用户名或密码错误 请去登陆','code'=>2]);
           }else{
-            // echo 12;die();
-            // session('uid',$select['uid']);
-            // $a=session()->save();
-            $request->session()->put('uid',$select['uid']);
+            $request->session()->put('uid',$select->uid);
             session()->save();
             return json_encode(['msg'=>'登陆成功','code'=>1]);
           }
@@ -109,7 +102,7 @@ class LoginController extends Controller
     public function quit(Request $request){
       $uid = $request->session()->get('uid');
       $request->session()->flush();
-      return redirect('index/index/login');
+      return view('/index/index/login');
     }
     public function user(){
       $select=DB::table('shop_usr')->get()->toArray();
