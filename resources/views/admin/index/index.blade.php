@@ -57,6 +57,24 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+                        <span class="ng-scope">登录</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa fa-bar-chart-o"></i>
+                            <span class="nav-label"> 登录 注册 </span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a class="J_menuItem" href='{{url("admin/index/login")}}'>登录</a>
+                            </li>
+                            <li>
+                                <a class="J_menuItem" href="{:url('admin/index/register')}">注册</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="line dk"></li>
                 </ul>
             </div>
