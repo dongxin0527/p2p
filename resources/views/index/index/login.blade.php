@@ -12,7 +12,7 @@
     <div class="zxcf_top px1000 clearfix">
          <div class="zxcf_top_l fl">
             <img src="/index/images/zxcf_phone.png" alt="">
-            400-027-0101(工作时间9:00-17:30)
+            董老师15102633389(工作时间9:00-17:30)
             <a href="#"><img src="/index/images/zxcf_weixin.png" alt=""></a>
             <a href="#"><img src="/index/images/zxcf_sina.png" alt=""></a>
             <a href="#"><img src="/index/images/zxcf_qq.png" alt=""></a>
@@ -76,7 +76,7 @@
                       </li>
                       <li>
                       <p class="pb20">服务热线</p>
-                      <strong>400-027-0101</strong>
+                      <strong>13681412840</strong>
                       </li>
                       <li>
                           <p class="pb10 linkpic">
@@ -84,7 +84,7 @@
                              <a href="#"><img src="/index/images/ft_weixin.png" alt=""></a>
                              <a href="#"><img src="/index/images/ft_erji.png" alt=""></a>
                           </p>
-                          <p><a href="#">kefu@zhongxincaifu.com</a></p>
+                          <p><a href="#">madajie@xiaoma.com</a></p>
                       </li>
                    </ul>
             </div>
