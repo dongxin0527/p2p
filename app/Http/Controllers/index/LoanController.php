@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\model\Common;
 use App\model\UserInfo;
 use App\model\Area;
+use Illuminate\Support\Facades\Cache;
 
 class LoanController extends Controller
 {
@@ -18,19 +19,34 @@ class LoanController extends Controller
     public function LoanForm(Request $request)
     {
         $uid = $request->get('uid');
-    	if (request()->ajax()) {
-    		$pid = $request->input('pid');
-    		$data = Area::where('pid',$pid)->get()->toArray();
-    		return $data;
-    	}else{
-    		$array = Area::get()->toArray();
-    		$arr = [];
-			foreach ($array as $k => $v) {
-				$arr[$v['id']] = $v['name'];
-			}
-	    	$data = Area::where('pid',0)->get()->toArray();
-	    	return view("index/loan/loanForm",['area'=>$data,'arr'=>$array]);
-    	}
+        $userinfo = UserInfo::isUserType($uid);
+        if (empty($userinfo)) {
+            if (request()->ajax()) {
+                $pid = $request->input('pid');
+                $data = Area::where('pid',$pid)->get()->toArray();
+                return $data;
+            }else{
+                $array = Area::get()->toArray();
+                $arr = [];
+                foreach ($array as $k => $v) {
+                    $arr[$v['id']] = $v['name'];
+                }
+                $data = Area::where('pid',0)->get()->toArray();
+                return view("index/loan/loanForm",['area'=>$data,'arr'=>$array]);
+            }            
+        }else{
+            if ($userinfo['type'] == 1) {
+                return redirect('index/loan/loanWait');
+            }else if($userinfo['type'] == 2){
+                return redirect('index/loan/gaveMoneyForm');
+            }else if($userinfo['type'] == 3){
+                $res = UserInfo::deleteUser($uid);
+                if ($res) {
+                   return redirect('index/loan/noPass'); 
+                }
+            }
+        }
+
     }
     /**
      * 借款处理
@@ -70,6 +86,7 @@ class LoanController extends Controller
     	//添加执行
     	$res = UserInfo::userAdd($data);
     	if ($res) {
+
     		Common::url("/index/loan/loanWait","信息已提交请等待");
     	}
     }
@@ -97,7 +114,7 @@ class LoanController extends Controller
     	return $grade;
     }
     /**
-     * 实名认证完成之后的等待页面
+     * 实名认证完成之后的等待页面和 另外几个视图
      * @author 杰克
      * @DateTime 2019-09-06T15:59:54+0800
      * @email    haiwanlvzhu@163.com
@@ -106,6 +123,10 @@ class LoanController extends Controller
     public function waiting()
     {
     	return view('index/loan/waiting');
+    }
+    public function noPass()
+    {
+        return view('index/loan/noPass');
     }
     public function wait_do(Request $request)
     {
@@ -123,10 +144,7 @@ class LoanController extends Controller
      */
     public function isEmpty($data)
     {
-    	if ($data['province'] == "请选择" || $data['city'] == "请选择" || $data['area'] == "请选择") {
-    		Common::url("/index/loan/loanForm","该表单每一项都是必填项,请核查!");die;
-    	}
-    	if (empty($data['detail'])||empty($data['name']) ||empty($data['phone']) ||empty($data['sex']) ||empty($data['merriage']) ||empty($data['born'])|| empty($data['idcard'])||empty($data['education']) ||empty($data['month_income']) || empty($data['housing'])||empty($data['buy_cars']) || empty($data['company']) ||empty($data['bank'])|| empty($data['bank_name']) ||empty($data['bank_account'])) {
+    	if ($data['province'] == "请选择" || $data['city'] == "请选择" || $data['area'] == "请选择" || empty($data['detail'])||empty($data['name']) ||empty($data['phone']) ||empty($data['sex']) ||empty($data['merriage']) ||empty($data['born'])|| empty($data['idcard'])||empty($data['education']) ||empty($data['month_income']) || empty($data['housing'])||empty($data['buy_cars']) || empty($data['company']) ||empty($data['bank'])|| empty($data['bank_name']) ||empty($data['bank_account'])) {
     		Common::url("/index/loan/loanForm","该表单每一项都是必填项,请核查!");die;
     	}
     }

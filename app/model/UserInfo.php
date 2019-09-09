@@ -71,4 +71,30 @@ class UserInfo extends Model
     	$data = self::where("uid",$uid)->first()->toArray();
    		return $data;
     }
+    /**
+     * 查询
+     * @author 杰克
+     * @DateTime 2019-09-09T14:28:51+0800
+     * @email    haiwanlvzhu@163.com
+     * @param    [type]                   $uid [description]
+     * @return   boolean                       [description]
+     */
+    public static function isUserType($uid)
+    {
+        $data = self::where("uid",$uid)->first();
+        return $data;
+    }
+    /**
+     * 删除实名信息
+     * @author 杰克
+     * @DateTime 2019-09-09T14:58:19+0800
+     * @email    haiwanlvzhu@163.com
+     * @param    [type]                   $uid [description]
+     * @return   [type]                        [description]
+     */
+    public static function deleteUser($uid)
+    {
+        $res = self::where("uid",$uid)->delete();
+        return $res;
+    }
 }

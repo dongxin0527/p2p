@@ -13,7 +13,7 @@
 <!--head-->
 <div class="top">
   <div class="wrap clearfix">
-    <em class="myfont">&#xe632;</em><span class="songti">服务热线：</span><span class="tel">15695491215</span>
+    <em class="myfont">&#xe632;</em><span class="songti">杰克：</span><span class="tel">15695491215</span>
     <a href="#" target="_blank" class="ico weibo"></a>
     <a href="#" target="_blank" class="ico weixin"></a>
     <a href="#" target="_blank" class="ico qq"></a>
@@ -25,14 +25,14 @@
       @endif
       
       <a href="index/index/register" class="o regbtn">免费注册
-      </a><a href="index/index/quit">退出</a>
+      </a><a href="{{url('index/index/quit')}}">退出</a>
     </span>
   </div>
 </div>
 <div class="head">
   <div class="wrap pct-h clearfix">
     <ul class="nav">
-      <li><a href="index.html">首页</a></li>
+      <li><a href="{{url('/')}}">首页</a></li>
       <li><a href="invest.html">我要投资</a></li>
       <li><a href="{{url('index/loan/loanForm')}}">我要借款</a></li>
       <li><a href="about.html">关于我们</a></li>
@@ -86,8 +86,8 @@
       </div>
     </div>
     <div class="footaside fr">
-      热线电话 (服务时间 00:00 - 24:00 )
-      <p><span class="tel">15695491215</span><a href="#" target="_blank">在线客服<em class="ico"></em></a></p>
+      性感杰克 (服务时间 00:00 - 24:00 )
+      <p><span class="tel">15695491215</span><a href="#" target="_blank">在线指导<em class="ico"></em></a></p>
       关注我们  <a href="#" target="_blank" class="ico weibo"></a> <a href="#" target="_blank" class="ico weixin"></a><a href="#" target="_blank" class="ico qq"></a>
     </div>
   </div>

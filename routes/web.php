@@ -31,6 +31,7 @@ Route::middleware(['CheckIndexLogin'])->namespace('index')->group(function(){
 			Route::any('loanForm','LoanController@loanForm');//我要借款
 			Route::any('loanadd_do','LoanController@loanadd_do');//我要借款的表单处理
 			Route::any('loanWait','LoanController@waiting');//等待审核
+			Route::any('noPass','LoanController@noPass');//未通过审核
 			Route::any('loanWait_do','LoanController@wait_do');//轮训查询审核结果
 			Route::any('gaveMoneyForm','LoanController@gaveMoneyForm');//贷款表单
 		});
