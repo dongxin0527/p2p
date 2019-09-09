@@ -17,7 +17,16 @@
     <a href="#" target="_blank" class="ico weibo"></a>
     <a href="#" target="_blank" class="ico weixin"></a>
     <a href="#" target="_blank" class="ico qq"></a>
-    <span class="fr"><a href="{{url('index/index/login')}}" class="loginbtn">登录</a><a href="index/index/register" class="o regbtn">免费注册</a><a href="index/index/quit">退出</a></span>
+    <span class="fr">
+      @if(session("uid") == "")
+        <a href="{{url('index/index/login')}}" class="loginbtn">登录</a>
+      @else
+        <b>已登录</b>
+      @endif
+      
+      <a href="index/index/register" class="o regbtn">免费注册
+      </a><a href="index/index/quit">退出</a>
+    </span>
   </div>
 </div>
 <div class="head">
