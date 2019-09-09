@@ -5,6 +5,7 @@ namespace App\Http\Controllers\index;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\model\UserModel;
+use \DB;
 class LoginController extends Controller
 {
 	/**
@@ -23,21 +24,30 @@ class LoginController extends Controller
     */
    public function login_do(Request $request){
    		$data=request()->all();
+      // dd($data);
    		$data['password']=sha1($data['password']);
    		$where=[
    			['username','=',$data['username']],
    			['password','=',$data['password']]
    		];
    		$uid = $request->session()->get('uid');
-   		// dd($uid);
+      // dd($uid);
    		// request()->session()->flush();die();
    		if(empty($uid)){
-   			$select=UserModel::where($where)->first();
-   			session('uid',$select['uid']);
-   			session()->save();
-   			return json_encode(['msg'=>'登陆成功','code'=>1]);
+     			$select=UserModel::where($where)->first()->toArray();
+          // dd($select);
+          if(empty($select)){
+            echo '<script>alert("用户名或密码错误 请去登陆");location.href="login"</script>';die();
+          }else{
+            // echo 12;die();
+            // session('uid',$select['uid']);
+            // $a=session()->save();
+            $request->session()->put('uid',$select['uid']);
+            session()->save();
+            return json_encode(['msg'=>'登陆成功','code'=>1]);
+          }
    		}else{
-   			echo '<script>alert("用户名已存在!前去注册呗");location.href="register";</script>;';
+   			echo '<script>alert("该用户已登陆");location.href="/"</script>';
    		}
    }
    /*
@@ -75,11 +85,46 @@ class LoginController extends Controller
     	$data['time']=time();
     	$data['password']=sha1($data['password']);
     	$data['pay_password'] = sha1($data['pay_password']);
-    	$add=UserModel::insert($data);
-    	if($add){
-    		return json_encode(['msg'=>'添加成功','code'=>1]);
-    	}else{
-    		return json_encode(['msg'=>'添加失败','code'=>2]);
-    	}
+      $where=[
+        ['username','=',$data['username']],
+        ['password','=',$data['password']]
+      ];
+      $find=UserModel::where($where)->first();
+      // dd($find);
+      if(empty($find)){
+        $add=UserModel::insert($data);
+        if($add){
+          return json_encode(['msg'=>'添加成功','code'=>1]);
+        }else{
+          return json_encode(['msg'=>'添加失败','code'=>2]);
+        }
+      }else{
+        echo '<script>alert("该用户已注册");location.href="login"</script>';
+      }
+    	
+    }
+    /**
+     * 退出
+     */
+    public function quit(Request $request){
+      $uid = $request->session()->get('uid');
+      $request->session()->flush();
+      return redirect('index/index/login');
+    }
+    public function user(){
+      $select=DB::table('shop_usr')->get()->toArray();
+      $version=[];
+      foreach($select as $k=>$v){
+        $version = $v;
+      }
+      $user_email=$version->user_email;
+      $user_pwd=$version->user_pwd;
+      $upd=DB::table('shop_usr')->update(['user_email'=>$user_email,'user_pwd'=>$user_pwd]);
+      if($upd){
+        $a=$version->version;
+        $vers=$a+1;
+        $update=DB::table('shop_usr')->update(['version'=>$vers]);
+        dd($vers);
+      }
     }
 }
