@@ -42,9 +42,9 @@ class LoanController extends Controller
     public function loanadd_do(Request $request)
     {
     	//获取用户ID
-    	$uid = $request->input('uid');
+    	$uid = $request->get('uid');
         if (empty($uid)) {
-            echo "未获取到用户ID可以没有登录,请再次登录谢谢!";die;
+            echo "未获取到用户ID可能没有登录,请再次登录谢谢!";die;
         }
     	//用户信息入库
     	$data = $request->all();
