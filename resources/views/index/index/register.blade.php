@@ -41,7 +41,7 @@
          <div class="zxcf_nav_r fr">
                 <img src="/index/images/lg_pic01.png" alt=""> 
             <span>
-            <a href="#">返回首页</a></span>
+            <a href="{{url('/')}}">返回首页</a></span>
             
          </div>
     </div>

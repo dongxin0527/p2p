@@ -24,7 +24,7 @@
         <b>已登录</b>
       @endif
       
-      <a href="index/index/register" class="o regbtn">免费注册
+      <a href="{{url('index/index/register')}}" class="o regbtn">免费注册
       </a><a href="{{url('index/index/quit')}}">退出</a>
     </span>
   </div>
