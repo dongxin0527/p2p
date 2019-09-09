@@ -40,7 +40,7 @@ class LoginController extends Controller
             return json_encode(['msg'=>'登陆成功','code'=>1]);
           }
    		}else{
-   			echo '<script>alert("该用户已登陆");location.href="/"</script>';
+        return json_encode(['msg'=>'请先退出','code'=>3]);
    		}
    }
    /*
