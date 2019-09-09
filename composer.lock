@@ -902,6 +902,10 @@
         },
         {
             "name": "mews/captcha",
+<<<<<<< HEAD
+            "version": "3.0.1",
+=======
+<<<<<<< HEAD
             "version": "3.0.1",
             "source": {
                 "type": "git",
@@ -912,10 +916,32 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/mewebstudio/captcha/zipball/bef0db3663f1fe442ae803fb207dbe2bbfa10890",
                 "reference": "bef0db3663f1fe442ae803fb207dbe2bbfa10890",
+=======
+            "version": "2.3.0",
+>>>>>>> fb216cec782465642150a5e2bfe9209b26bd511a
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mewebstudio/captcha.git",
+                "reference": "bef0db3663f1fe442ae803fb207dbe2bbfa10890"
+            },
+            "dist": {
+                "type": "zip",
+<<<<<<< HEAD
+                "url": "https://api.github.com/repos/mewebstudio/captcha/zipball/bef0db3663f1fe442ae803fb207dbe2bbfa10890",
+                "reference": "bef0db3663f1fe442ae803fb207dbe2bbfa10890",
+=======
+                "url": "https://api.github.com/repos/mewebstudio/captcha/zipball/2c9efa19d7d7ae56bed5f23e1c4c42ea5d01fc1a",
+                "reference": "2c9efa19d7d7ae56bed5f23e1c4c42ea5d01fc1a",
+>>>>>>> master
+>>>>>>> fb216cec782465642150a5e2bfe9209b26bd511a
                 "shasum": ""
             },
             "require": {
                 "ext-gd": "*",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fb216cec782465642150a5e2bfe9209b26bd511a
                 "illuminate/config": "~5.0|^6.0",
                 "illuminate/filesystem": "~5.0|^6.0",
                 "illuminate/hashing": "~5.0|^6.0",
@@ -923,10 +949,29 @@
                 "illuminate/support": "~5.0|^6.0",
                 "intervention/image": "~2.5",
                 "php": "^7.2"
+<<<<<<< HEAD
             },
             "require-dev": {
                 "mockery/mockery": "^1.0",
                 "phpunit/phpunit": "^8.0"
+=======
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^8.0"
+=======
+                "illuminate/config": "~5.0",
+                "illuminate/filesystem": "~5.0",
+                "illuminate/hashing": "~5.0",
+                "illuminate/support": "~5.0",
+                "intervention/image": "~2.2",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.1"
+>>>>>>> master
+>>>>>>> fb216cec782465642150a5e2bfe9209b26bd511a
             },
             "type": "package",
             "extra": {
@@ -954,6 +999,26 @@
             "authors": [
                 {
                     "name": "Muharrem ERİN",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    "email": "me@mewebstudio.com",
+                    "homepage": "https://github.com/mewebstudio",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel 5 & 6 Captcha Package",
+            "homepage": "https://github.com/mewebstudio/captcha",
+            "keywords": [
+                "captcha",
+                "laravel5 Security",
+                "laravel6 Captcha",
+                "laravel6 Security"
+            ],
+            "time": "2019-09-05T22:33:04+00:00"
+=======
+                    "role": "Developer",
+>>>>>>> fb216cec782465642150a5e2bfe9209b26bd511a
                     "email": "me@mewebstudio.com",
                     "homepage": "https://github.com/mewebstudio",
                     "role": "Developer"

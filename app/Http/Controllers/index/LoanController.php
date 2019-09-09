@@ -42,6 +42,9 @@ class LoanController extends Controller
     {
     	//获取用户ID
     	$uid = Common::getUserId();
+        if (empty($uid)) {
+            echo "未获取到用户ID可以没有登录,请再次登录谢谢!";die;
+        }
     	//用户信息入库
     	$data = $request->all();
     	$this->isEmpty($data);
