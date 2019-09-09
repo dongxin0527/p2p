@@ -15,10 +15,12 @@ class CheckIndexLogin
      */
     public function handle($request, Closure $next)
     {
-        if ($request->session()->has('uid')) {
-
-            echo '<script>alert("未登录 去登陆吧😘");location.href="login";</script>';die;
+        if (!$request->session()->has('uid')) {
+            echo '<script>alert("未登录 去登陆吧😘");location.href="/index/index/login";</script>';die;
         }else{
+            $uid=$request->session()->get('uid');
+            $uid=['uid'=>$uid];
+            $request->attributes->add($uid);
         }
         return $next($request);
     }

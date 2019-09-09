@@ -18,9 +18,9 @@
             <a href="#"><img src="/index/images/zxcf_qq.png" alt=""></a>
          </div>
          <div class="zxcf_top_r fr">
-            <a href="login.html" class="curspan">立即登录</a>
+            <a href="login" class="curspan">立即登录</a>
             <span>|</span>
-            <a href="register.html">免费注册</a>
+            <a href="register">免费注册</a>
             <span>|</span>
             <a href="problem.html">常见问题</a>
          </div>
@@ -137,7 +137,7 @@
             data:{username:username,password:password},
             success:function(res){
                 if(res.code==1){
-                    window.location.href="index";
+                    window.location.href="/";
                 }
             }
         })
