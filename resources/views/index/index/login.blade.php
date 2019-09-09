@@ -136,6 +136,7 @@
             dataType:'json',
             data:{username:username,password:password},
             success:function(res){
+                alert(res.msg);
                 if(res.code==1){
                     window.location.href="/";
                 }

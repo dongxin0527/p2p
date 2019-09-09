@@ -18,7 +18,6 @@ class LoanController extends Controller
     public function LoanForm(Request $request)
     {
         $uid = $request->get('uid');
-        dd($uid);
     	if (request()->ajax()) {
     		$pid = $request->input('pid');
     		$data = Area::where('pid',$pid)->get()->toArray();
@@ -43,7 +42,7 @@ class LoanController extends Controller
     public function loanadd_do(Request $request)
     {
     	//获取用户ID
-    	$uid = Common::getUserId();
+    	$uid = $request->input('uid');
         if (empty($uid)) {
             echo "未获取到用户ID可以没有登录,请再次登录谢谢!";die;
         }
@@ -110,7 +109,7 @@ class LoanController extends Controller
     }
     public function wait_do(Request $request)
     {
-    	$uid = 1;//先写死
+    	$uid = $request->get('uid');
     	$data = UserInfo::isLoan($uid);
     	return json_encode(['code'=>1,'data'=>$data['type']]);
     }
